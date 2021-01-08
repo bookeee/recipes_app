@@ -1,0 +1,60 @@
+inherit_from: .rubocop_todo.yml
+
+# .rubocop.yml
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 2.7.2
+  TargetRailsVersion: 6.0.3.4
+  NewCops: enable
+
+  Include:
+    - 'config.ru'
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'Rakefile'
+    - 'app/**/*.rb'
+    - 'config/**/*.rb'
+    - 'lib/**/*.rb'
+    - 'spec/**/*.rb'
+    - 'db/seeds.rb'
+
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'log/**/*'
+    - 'node_modules/**/*'
+    - 'public/**/*'
+    - 'script/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - '.git/**/*'
+    - 'app/views/**/*'
+    - 'config/environments/*'
+    - 'config/initializers/*'
+
+Layout/IndentationConsistency:
+  EnforcedStyle: 'indented_internal_methods'
+
+Layout/LineLength:
+  Max: 80
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Guardfile'
+
+Naming/FileName:
+  Exclude:
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'Rakefile'
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: single_quotes
