@@ -16,6 +16,7 @@ gem 'contentful'
 
 
 group :development, :test do
+  gem 'pry'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 
   gem 'rubocop'
