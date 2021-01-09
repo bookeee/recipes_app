@@ -1,0 +1,10 @@
+<main class="container">
+  <div class="bg-light p-5 rounded">
+    <img src="<%= @recipe.image_url %>" class="card-img-top" alt="...">
+    <h1><%= @recipe.title %></h1>
+    <h2><%= @recipe.chef_name %></h2>
+    <p class="lead"><%= sanitize(@recipe.decription_html) %></p>
+    <p class="lead">Tags: <%= @recipe.tags %></p>
+  </div>
+  <%= link_to 'Back', recipes_path, class: "btn btn-primary" %>
+</main>

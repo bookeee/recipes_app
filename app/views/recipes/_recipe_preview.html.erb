@@ -1,12 +1,13 @@
-<div class="col">
+<div class="col" style='margin-top: 15px;'>
   <div class="card shadow-sm">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="<%= recipe.image_url %>" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title"><%= recipe.title %></h5>
-      <h5 class="card-title"><%= recipe.chef_name %></h5>
-      <p class="card-text"><%= recipe.description %></p>
-      <p class="card-text"><%= recipe.tags %></p>
-      <a href=""<%= recipe_path(recipe.id) %>"" class="btn btn-primary">Go somewhere</a>
+      <h4 class="card-title"><%= recipe.chef_name %></h4>
+      <p class="card-text"><%= sanitize(recipe.decription_html) %></p>
+      <p class="card-text">Tags: <%= recipe.tags %></p>
+      <%= link_to "Go to recipe", recipe_path(recipe.id), class: "btn btn-primary"%>
     </div>
   </div>
 </div>
+<br>

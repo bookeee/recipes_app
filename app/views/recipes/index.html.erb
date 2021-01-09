@@ -1,0 +1,16 @@
+<div class="py-5 text-center container">
+  <h2 class="fw-light">Recipes</h2>
+</div>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 my-3">
+          <% @recipes.each do |recipe| %>
+            <%= render :partial => 'recipe_preview', locals: { recipe: recipe } %>
+        <% end %>
+      </div>
+    </div>
+</div>
+
+<br>
+
