@@ -2,7 +2,7 @@ module Services
   module Contentful
     class EntryService < Services::Contentful::Base
       def initialize(id)
-        super
+        super()
         @id = id
       end
 
