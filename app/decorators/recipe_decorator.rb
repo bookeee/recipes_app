@@ -9,7 +9,7 @@ class RecipeDecorator < Draper::Decorator
 
   def chef_name
     if object.fields[:chef]
-      object.chef&.name
+      object.chef.name
     else
       'Unknown Chef'
     end
