@@ -25,6 +25,13 @@ group :development, :test do
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+  gem 'rspec'
+  gem 'rspec-rails', '~> 4.0.1'
+  gem 'simplecov'
+  gem 'webmock'
 end
 
 group :development do
